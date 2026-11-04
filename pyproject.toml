@@ -7,15 +7,19 @@ name = "pose-ghoster"
 dynamic = ["version"]
 description = "GPU-drawn pose ghosting for Autodesk Maya (Viewport 2.0, MUIDrawManager)"
 readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.7"
-authors = [{ name = "Clement Daures", email = "hello@clementdaures.com"}]
+authors = [{ name = "Clement Daures", email = "hello@clementdaures.com" }]
 dependencies = ["Qt.py>=1.3.8"]
 
 [project.urls]
 Website = "https://clementdaures.com"
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = ["pytest", "black", "ruff"]
+
+[tool.uv]
+environments = ["python_version >= '3.9'"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

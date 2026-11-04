@@ -1,0 +1,2 @@
+"""Pose Ghoster tests suite.
+"""

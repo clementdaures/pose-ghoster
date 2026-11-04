@@ -49,6 +49,10 @@ class PoseGhosterLocator(omui.MPxLocatorNode):
     def initialize() -> None:
         """Declare node attributes (none needed)."""
 
+    def excludeAsLocator(self) -> bool:
+        """Disable ghost toggling in animator viewport"""
+        return False
+
 
 def initializePlugin(plugin: om.MObject) -> None:
     """Register the locator node and its draw override.
@@ -114,6 +118,8 @@ def ensure_locator() -> str:
     xf = cmds.createNode("transform", name=HOST_TRANSFORM)
     shape = cmds.createNode(NODE_NAME, parent=xf, name=HOST_TRANSFORM + "Shape")
     cmds.setAttr(xf + ".hiddenInOutliner", 1)
+    cmds.setAttr(shape + ".overrideEnabled", 1)
+    cmds.setAttr(shape + ".overrideDisplayType", 2)
     return cmds.ls(shape, long=True)[0]
 
 

@@ -32,3 +32,8 @@ prompt/
 *.py.lock
 
 *.mtf
+
+site/
+mkdocs.yml
+.python-version
+uv.lock

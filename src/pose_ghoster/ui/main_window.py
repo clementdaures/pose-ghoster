@@ -18,8 +18,7 @@ OBJECT_NAME = "PoseGhosterPanel"
 APP_TITLE = "Pose Ghoster"
 DOCS_URL = "https://docs.clementdaures.com/pose-ghoster"
 AUTHOR_URL = "https://clementdaures.com"
-# TODO: point this to the issue tracker (or a mailto: link) once it is known.
-REPORT_BUG_URL = "https://clementdaures.com"
+REPORT_BUG_URL = "https://report.clementdaures.com"
 
 # endregion
 
